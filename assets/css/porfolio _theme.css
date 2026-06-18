@@ -135,3 +135,19 @@ main {
   font-size: 0.9rem;
   color: var(--secondary);
 }
+
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badges span {
+    background: #DBEAFE;
+    color: #1D4ED8;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    font-weight: 600;
+}

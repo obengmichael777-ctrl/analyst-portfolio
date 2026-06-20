@@ -1,45 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/portfolio_theme.css' | relative_url }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title | default: "Michael Obeng · Data Analyst" }}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/css/portfolio_theme.css' | relative_url }}" />
 </head>
 <body>
-  <header>
-    <h1>Michael Obeng</h1>
-    <h2>Data Analyst | SQL | Python | Power BI</h2>
-    <p>Turning data into actionable insights through data visualization and analytics.</p>
-    <nav>
-      <a href="{{ '/' | relative_url }}" class="button primary">Home</a>
-      <a href="#" class="button accent">Resume</a>
-      <a href="#" class="button accent">LinkedIn</a>
-      <a href="https://github.com/obengmichael777-ctrl" class="button accent">GitHub</a>
-    </nav>
-    <section class="skills">
 
-    <h2>Technical Skills</h2>
+    <!-- ========== HEADER / HERO ========== -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Michael Obeng</h1>
+                <p class="tagline">Data Analyst · Business Analytics · Storytelling with Data</p>
+                <p class="bio">
+                    I help businesses uncover hidden patterns and turn data into
+                    <strong>actionable insights</strong>. Passionate about bridging the gap
+                    between technical analysis and strategic decision-making.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i> View My Work
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
+                    <a href="https://github.com/obengmichael777-ctrl" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <!-- optional avatar / placeholder -->
+            <div class="hero-visual">
+                <div class="avatar-placeholder">
+                    <span>📊</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="skill-badges">
-
-    <span>SQL</span>
-    <span>Python</span>
-    <span>Power BI</span>
-    <span>Tableau</span>
-    <span>Excel</span>
-    <span>Pandas</span>
-
-    </div>
-
+    <!-- ========== SKILLS BAR ========== -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-code"></i> Technical Toolkit
+            </h2>
+            <div class="skill-badges">
+                <span class="badge"><i class="fas fa-database"></i> SQL</span>
+                <span class="badge"><i class="fab fa-python"></i> Python</span>
+                <span class="badge"><i class="fas fa-chart-bar"></i> Power BI</span>
+                <span class="badge"><i class="fas fa-chart-pie"></i> Tableau</span>
+                <span class="badge"><i class="fas fa-table"></i> Excel</span>
+                <span class="badge"><i class="fas fa-cubes"></i> Pandas</span>
+                <span class="badge"><i class="fas fa-code-branch"></i> Git</span>
+                <span class="badge"><i class="fas fa-cloud"></i> BigQuery</span>
+            </div>
+        </div>
     </section>
-  </header>
 
-  <main>
-    {{ content }}
-  </main>
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; {{ site.time | date: "%Y" }} Michael Obeng &middot;
+                Built with <i class="fas fa-heart" style="color: var(--accent);"></i> on GitHub Pages &amp; Jekyll
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/obengmichael777-ctrl" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

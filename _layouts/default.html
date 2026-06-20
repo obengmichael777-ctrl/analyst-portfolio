@@ -7,39 +7,110 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/portfolio_theme.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/portfolio_theme.css">
 </head>
 <body>
-  <header>
-    <h1>Michael Obeng</h1>
-    <h2>Data Analyst | SQL | Python | Power BI</h2>
-    <p>Turning data into actionable insights through data visualization and analytics.</p>
-    <nav>
-      <a href="{{ '/' | relative_url }}" class="button primary">Home</a>
-      <a href="#" class="button accent">Resume</a>
-      <a href="#" class="button accent">LinkedIn</a>
-      <a href="https://github.com/obengmichael777-ctrl" class="button accent">GitHub</a>
-    </nav>
-    <section class="skills">
 
-    <h2>Technical Skills</h2>
+  <div class="page-wrapper">
 
-    <div class="skill-badges">
+    <!-- ========== LEFT SIDEBAR - NAVIGATION ========== -->
+    <aside class="sidebar-left">
+      <div class="nav-brand">Michael Obeng</div>
+      <nav>
+        <a href="{{ '/' | relative_url }}" class="active">🏠 Home</a>
+        <a href="#projects">📊 Projects</a>
+        <a href="#skills">🛠️ Skills</a>
+        <a href="#">📄 Resume</a>
+      </nav>
+      <div class="nav-footer">
+        &copy; {{ site.time | date: "%Y" }}<br>Data Analyst Portfolio
+      </div>
+    </aside>
 
-    <span>SQL</span>
-    <span>Python</span>
-    <span>Power BI</span>
-    <span>Tableau</span>
-    <span>Excel</span>
-    <span>Pandas</span>
+    <!-- ========== CENTER CONTENT ========== -->
+    <div class="main-content">
+
+      <header>
+        <h1>Michael Obeng</h1>
+        <h2>Data Analyst | SQL | Python | Power BI</h2>
+        <p>Turning data into actionable insights through data visualization and analytics.</p>
+        <nav>
+          <a href="{{ '/' | relative_url }}" class="button primary">Home</a>
+          <a href="#" class="button accent">Resume</a>
+          <a href="#" class="button accent">LinkedIn</a>
+          <a href="https://github.com/obengmichael777-ctrl" class="button accent">GitHub</a>
+        </nav>
+      </header>
+
+      <section class="skills" id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-badges">
+          <span>SQL</span>
+          <span>Python</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+          <span>Excel</span>
+          <span>Pandas</span>
+          <span>Git</span>
+          <span>BigQuery</span>
+        </div>
+      </section>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer>
+        <p>&copy; {{ site.time | date: "%Y" }} Michael Obeng · Data Analyst Portfolio</p>
+      </footer>
 
     </div>
 
-    </section>
-  </header>
+    <!-- ========== RIGHT SIDEBAR - PHOTO & CONTACT ========== -->
+    <aside class="sidebar-right">
+      <!-- Passport Photo Placeholder -->
+      <div class="photo-wrapper">
+        <!-- Replace the placeholder below with your actual image -->
+        <!-- <img src="/assets/images/passport-photo.jpg" alt="Michael Obeng"> -->
+        <div class="photo-placeholder">
+          📷
+        </div>
+      </div>
 
-  <main>
-    {{ content }}
-  </main>
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h3>Contact</h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>Your Location</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>your.email@example.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <span>+123 456 7890</span>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://github.com/obengmichael777-ctrl" class="social-link" title="GitHub" target="_blank">
+            GH
+          </a>
+          <a href="#" class="social-link" title="LinkedIn" target="_blank">
+            LI
+          </a>
+          <a href="#" class="social-link" title="Twitter">
+            TW
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
 </body>
 </html>

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="project-detail">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    <div class="project-meta">
+      {% if page.tools %}
+      <div class="project-tools">
+        {% for tool in page.tools %}
+        <span class="tool-badge">{{ tool }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  <div class="project-actions">
+    {% if page.notion_url %}
+    <a href="{{ page.notion_url }}" class="button primary" target="_blank">
+      📄 Read Full Write-up
+    </a>
+    {% endif %}
+    
+    {% if page.repository %}
+    <a href="{{ page.repository }}" class="button accent" target="_blank">
+      💻 View Repository
+    </a>
+    {% endif %}
+  </div>
+</article>

@@ -3,7 +3,15 @@ description: Turning data into actionable insights
 baseurl: "/analyst-portfolio" 
 url: "https://obengmichael777-ctrl.github.io"
 markdown: kramdown
+
 collections:
   projects:
     output: true
     permalink: /projects/:path/
+    
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project

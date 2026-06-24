@@ -7,7 +7,7 @@ markdown: kramdown
 collections:
   project_archive:
     output: true
-    permalink: /:path/
+    permalink: /projects/:path/
   project_brief_library:
     output: false
     

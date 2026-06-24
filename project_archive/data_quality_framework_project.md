@@ -1,6 +1,7 @@
 ---
 title: "Data Quality Framework"
 description: "A configurable Python framework that validates financial data before it enters analytical systems. Designed around the belief that trustworthy insights require trustworthy data, it applies customizable quality checks to identify issues early, reducing downstream risk and improving confidence in decision-making."
+slug: data-quality-framework
 image: "assets/images/data_quality_framework_image.png"
 repository: "https://github.com/obengmichael777-ctrl/data_quality_framework.git"
 notion_url: "https://simplistic-art-989.notion.site/Data-Quality-Framework-Project-387b29983fb18037a659edb6ebb9ecde"
@@ -8,7 +9,7 @@ tools:
   - Python
   - Pandas
   - Jupyter
-date: 2024-01-15
+date: 2026-06-20
 ---
 
 ## Project Overview

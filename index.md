@@ -7,31 +7,38 @@ title: Home
   <h2>My Projects</h2>
   
   <div class="project-grid">
-    {% for project in site.projects %}
+    {% for brief in site.project_brief_library %}
+      {% assign project_slug = brief.slug | default: brief.title | slugify %}
+      {% assign full_project = site.project_archive | where: "slug", project_slug | first %}
+      
       <article class="project-card">
-        {% if project.image %}
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+        {% if brief.image %}
+        <div class="project-card-image">
+          <img src="{{ brief.image | relative_url }}" alt="{{ brief.title }}">
+        </div>
         {% endif %}
         
         <div class="project-card-content">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
+          <h3>{{ brief.title }}</h3>
+          <p>{{ brief.description }}</p>
           
-          {% if project.tools %}
+          {% if brief.tools %}
           <div class="project-tools-mini">
-            {% for tool in project.tools limit:3 %}
+            {% for tool in brief.tools limit:4 %}
             <span class="mini-tool">{{ tool }}</span>
             {% endfor %}
           </div>
           {% endif %}
           
           <div class="project-card-actions">
-            <a href="{{ project.url | relative_url }}" class="button primary">
-              Read More
+            {% if full_project %}
+            <a href="{{ full_project.url | relative_url }}" class="button primary">
+              View Project
             </a>
-            {% if project.repository %}
-            <a href="{{ project.repository }}" class="button accent" target="_blank">
-              View Code
+            {% endif %}
+            {% if brief.repository %}
+            <a href="{{ brief.repository }}" class="button accent" target="_blank">
+              GitHub
             </a>
             {% endif %}
           </div>

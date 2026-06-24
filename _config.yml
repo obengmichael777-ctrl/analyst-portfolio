@@ -5,13 +5,15 @@ url: "https://obengmichael777-ctrl.github.io"
 markdown: kramdown
 
 collections:
-  projects:
+  project_archive:
     output: true
     permalink: /projects/:path/
+  project_brief_library:
+    output: false
     
 defaults:
   - scope:
       path: ""
-      type: "projects"
+      type: "project_archive"
     values:
       layout: project
